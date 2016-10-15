@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websocket</title>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="./js/chat.js"></script>
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+    <div style="width:400px;height:500px;padding: 2px;overflow:hidden;border: 1px solid #ccc;border-radius: 5px;margin: 100px auto;">
+        <h1 style="height: 20px;margin:10px;" align="center">聊天室</h1>
+        <div style="overflow:scroll;border-top:1px solid #ccc;margin-top: 20px;width: 100%;height:420px">
+            <ul id="messages" style="width: 80%;margin:0 auto">
+
+            </ul>
+        </div>
+        <input type="text" id="mes" style="width: 300px;float: left;height: 19px;padding: 3px" autofocus />
+        <input id="send" type="button" value="发送" style="width: 80px;float: left;height: 29px;margin-left:5px;cursor:pointer;padding: 3px;">
+    </div>
+
+</body>
+</html>

@@ -5,6 +5,9 @@ window.onload = function () {
         socket.on('announcement',function (msg) {
             $("#messages").append("<li style='color:green;'>"+msg+"</li>");
         });
+        socket.on('leave',function(msg){
+            $("#messages").append("<li style='color:red;'>"+msg+"</li>");
+        });
     });
     //回车事件
     document.onkeydown = function(e){

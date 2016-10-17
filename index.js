@@ -48,7 +48,12 @@ io.sockets.on('connection',function (socket) {
     socket.on('text',function (msg) {
         socket.broadcast.emit('text',socket.nickname,msg);
         console.log("["+new Date()+']'+socket.nickname+": "+msg);
-    })
+    });
+    //断开连接发送消息
+    socket.on('disconnect',function(){
+        console.log(socket.nickname+" 离开了聊天室");
+        socket.broadcast.emit('leave',socket.nickname+" 离开了聊天室");
+    });
 });
 
 //app.listen(3000);
